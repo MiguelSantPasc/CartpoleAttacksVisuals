@@ -107,30 +107,32 @@ h1 {
 
 .video-header {
   display: flex;
-  align-items: center;
-  gap: 14px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
   padding: 6px 6px 0;
 }
 
 .video-header h2 {
   margin: 0;
-  font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+  font-size: clamp(1.25rem, 2.6vw, 1.7rem);
+  line-height: 1.2;
   letter-spacing: -0.02em;
   color: #2b2118;
   font-family: "Bahnschrift", "Arial Narrow", sans-serif;
 }
 
 .video-step {
-  flex: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 999px;
   background: #8e4f2e;
   color: #fffaf3;
+  font-size: 0.72rem;
   font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 .video-text {
