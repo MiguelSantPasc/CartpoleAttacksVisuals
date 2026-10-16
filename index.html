@@ -10,9 +10,9 @@
 <body>
   <main class="page">
     <section class="hero">
-      <p class="eyebrow">Adversarial State-Space Models</p>
+      <p class="eyebrow">Adversarial observations in  State-Space Models for Robust RL</p>
       <h1>CartPole Videos</h1>
-      <p class="subtitle">Kalman filtering under noise, adversarial attack and defense.</p>
+      <p class="subtitle">RL performanceunder noise, adversarial attack and defense.</p>
       <p class="authors">
         <a href="https://www.linkedin.com/in/miguel-santos-pascual-a18722290/" target="_blank" rel="noreferrer">Miguel Santos</a><sup>1,2</sup>,
         David Ríos Insua<sup>1</sup>
@@ -32,7 +32,7 @@
         <p class="video-text">
           Baseline scenario: the controller acts on the state estimated by a Kalman filter from noisy
           observations. Despite the measurement noise, the filter tracks the cart and pole well enough
-          to keep the pole balanced.
+          to keep the pole balanced and close to the desired position.
         </p>
         <video controls playsinline preload="metadata">
           <source src="cartpole_seed100_noisy_kf.mp4" type="video/mp4">
@@ -47,8 +47,8 @@
         </header>
         <p class="video-text">
           An adversary perturbs the noisy observations before they reach the filter. The corrupted
-          measurements bias the state estimates, the controller acts on a wrong picture of the system
-          and the pole can no longer be stabilised.
+          measurements bias the state estimates, the controller acts poorly,
+          and the pole moves away from the desired position and can no longer be stabilised.
         </p>
         <video controls playsinline preload="metadata">
           <source src="cartpole_seed100_noisy_attack.mp4" type="video/mp4">
@@ -64,7 +64,7 @@
         <p class="video-text">
           The same attack is applied, but now the defense is active (with strength λ = 2.0). It limits
           the influence of the manipulated observations on the estimates, so the controller recovers
-          and the pole stays balanced.
+          and the pole stays balanced and close to the desired position.
         </p>
         <video controls playsinline preload="metadata">
           <source src="cartpole_seed100_noisy_attack_defense_lambda2p0.mp4" type="video/mp4">
