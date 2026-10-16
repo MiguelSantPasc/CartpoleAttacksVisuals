@@ -100,6 +100,45 @@ h1 {
   backdrop-filter: blur(10px);
 }
 
+.videos {
+  display: grid;
+  gap: 28px;
+}
+
+.video-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 6px 6px 0;
+}
+
+.video-header h2 {
+  margin: 0;
+  font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+  letter-spacing: -0.02em;
+  color: #2b2118;
+  font-family: "Bahnschrift", "Arial Narrow", sans-serif;
+}
+
+.video-step {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #8e4f2e;
+  color: #fffaf3;
+  font-weight: 700;
+}
+
+.video-text {
+  margin: 12px 6px 16px;
+  line-height: 1.6;
+  color: #5f5348;
+}
+
 video {
   display: block;
   width: 100%;
@@ -109,9 +148,10 @@ video {
 }
 
 .institutions {
-  margin-top: 26px;
+  width: min(1120px, 100%);
+  margin: 26px auto 0;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -171,8 +211,11 @@ video {
   }
 
   .institutions {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
+  }
+
+  .videos {
+    gap: 18px;
   }
 
   .logo-card {
